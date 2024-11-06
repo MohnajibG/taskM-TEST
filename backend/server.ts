@@ -11,10 +11,17 @@ app.use(cors());
 app.use(express.json());
 
 // Connexion à MongoDB
-mongoose
-  .connect("mongodb://localhost:27017/taskManagerDB")
-  .then(() => console.log("✅ Connected to MongoDB"))
-  .catch((err) => console.error("❌ MongoDB connection error:", err));
+
+const connectToDatabase = async () => {
+  try {
+    await mongoose.connect("mongodb://localhost:27017/taskManagerDB");
+    console.log("✅ Connected to MongoDB");
+  } catch (err) {
+    console.error("❌ MongoDB connection error:", err);
+  }
+};
+
+connectToDatabase();
 
 // Utilisation des routes
 app.use(taskRoutes);
