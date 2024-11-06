@@ -1,0 +1,21 @@
+body {
+  margin-top: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.604);
+}
+
+input {
+  width: 20vw;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 12px;
+}
